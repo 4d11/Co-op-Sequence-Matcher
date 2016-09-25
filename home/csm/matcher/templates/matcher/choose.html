@@ -1,0 +1,44 @@
+{% extends 'blog/base.html' %}
+
+{% block content %}
+
+    <div class="dropdown">
+        <h4>What Sequence are you in?</h4>
+        <div class="btn-group">
+            <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Sequence <span class="caret"></span></button>
+            <ul class="dropdown-menu dropdown-menu">
+                <li><a href="#">1</a></li>
+                <li><a href="#">2</a></li>
+                <li><a href="#">3</a></li>
+                <li><a href="#">4</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="dropdown">
+        <h4>What Sequence do you want to change to?</h4>
+        <div class="btn-group">
+            <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Desired Sequence <span class="caret"></span></button>
+            <ul class="dropdown-menu dropdown-menu">
+                <li><a href="#">1</a></li>
+                <li><a href="#">2</a></li>
+                <li><a href="#">3</a></li>
+                <li><a href="#">4</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="btn">
+        <button class="btn">send</button>
+    </div>
+
+
+
+
+
+    <h1>New post</h1>
+    <form method="POST" class="post-form">{% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit" class="save btn btn-default">Save</button>
+    </form>
+{% endblock %}

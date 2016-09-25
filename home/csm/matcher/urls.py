@@ -6,5 +6,5 @@ urlpatterns = [
 	#eg: /matcher/
     url(r'^$', views.index, name='index'),
     #eg /matcher/choose
-    url(r'^choose/$', views.choose, name='choose')
+    url(r'^choose/$', views.choose, name='choose'),
 ]
