@@ -15,8 +15,11 @@ Including another URLconf
 """
 from django.conf.urls import url, include
 from django.contrib import admin
+import django_cas_ng.views
 
 urlpatterns = [
 	url(r'^matcher/', include ('matcher.urls')),
     url(r'^admin/', admin.site.urls),
+	url(r'^$', django_cas_ng.views.login, name='cas_ng_login'),
+	url(r'^accounts/logout$', django_cas_ng.views.logout, name='cas_ng_logout'),
 ]
